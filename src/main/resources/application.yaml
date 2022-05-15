@@ -1,0 +1,27 @@
+server:
+  port: 9090
+
+spring:
+  data:
+    mongodb:
+      authentication-database: admin
+      database: mobileDeDatabase
+      host: localhost
+      password: password
+      port: 27017
+      username: admin
+  jpa:
+    properties:
+      hibernate:
+        ogm:
+          datastore:
+            create_database: true
+#logging:
+#  pattern:
+#    file: '%d [%level] %c{1.} [%t] %m%n'
+#    console: '%d [%level] %c{1.} [%t] %m%n'
+#  level:
+#    de:
+#      mobile: error
+#  file:
+#    name: /foldername/spring.log
