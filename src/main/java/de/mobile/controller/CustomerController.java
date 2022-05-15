@@ -28,8 +28,8 @@ public class CustomerController {
         LOGGER.trace("Inside addCustomer");
         MobileCustomer foundCustomer = validationService.getValidMobileCustomer(id, mobileCustomer);
         LOGGER.debug("Customer " + mobileCustomer.getFirstName() + " found.");
-        mobileCustomer.setId(id);
-        mobileCustomerRepository.save(mobileCustomer);
+        foundCustomer.setId(id);
+        mobileCustomerRepository.save(foundCustomer);
         return ResponseEntity.ok("User Added");
     }
 
